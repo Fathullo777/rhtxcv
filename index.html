@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="https://proweb.uz/students/receipt.js"></script>
+    <div class="container">
+        <h1>Крестики-нолики</h1>
+        <div class="game-mode">
+            <label for="gameModeSelect">Режим игры:</label>
+            <select id="gameModeSelect">
+                <option value="bot" selected>Игра с ботом</option>
+                <option value="friend">Игра с другом</option>
+            </select>
+        </div>
+        <div class="difficulty">
+            <label for="difficultySelect">Уровень сложности:</label>
+            <select id="difficultySelect">
+                <option value="easy">Легкий</option>
+                <option value="normal" selected>Нормальный</option>
+                <option value="hard">Сложный</option>
+            </select>
+        </div>
+        <div class="score">
+            <p>Счет: <span id="score">0</span></p>
+        </div>
+        <div class="board" id="board"></div>
+        <button id="restart">Начать заново</button>
+        <div id="message"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

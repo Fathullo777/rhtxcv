@@ -1,0 +1,148 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff8a65, #ff9e80, #ffab91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+    color: #37474f;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.difficulty, .score {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1em;
+    color: #37474f;
+}
+
+select {
+    padding: 6px 12px;
+    font-size: 1em;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #ff8a65;
+    outline: none;
+}
+
+.score {
+    font-size: 1.2em;
+    color: #37474f;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px auto;
+    width: 100%;
+    max-width: 340px;
+}
+
+.cell {
+    aspect-ratio: 1; /* Квадратная форма */
+    background-color: #ffccbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #37474f;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+    background-color: #ffab91;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7043;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #d84315;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: #37474f;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+/* Улучшенная мобильная адаптация */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    .difficulty, .score {
+        font-size: 1em;
+    }
+
+    .board {
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 1.8em;
+    }
+
+    select, button {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+
+    #message {
+        font-size: 1.1em;
+    }
+}
